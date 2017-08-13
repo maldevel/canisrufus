@@ -114,7 +114,6 @@ Commands:
   -stop-keylogger       Stop keylogger
   -git-checkin CHECK    Seconds to wait before checking for new commands
   -jitter jit           Percentage of Jitter
-
 ```
 
 Shellcode Exec
