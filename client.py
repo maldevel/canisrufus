@@ -52,7 +52,6 @@ import pythoncom
 import random
 
 from pygithub3 import Github
-from pygithub3.services.repos import Commits
 from win32com.client import GetObject
 from enum import Enum
 from base64 import b64decode
